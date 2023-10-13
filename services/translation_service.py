@@ -3,6 +3,7 @@ import openai
 from services import AIService
 from dotenv import load_dotenv
 from builders.prompt_builder import PromptBuilder
+from config.logging_config import logger
 load_dotenv()
 
 
@@ -23,7 +24,10 @@ class TranslationService(AIService):
         )
 
         # Actual logic or API calls for translation
-        completion = openai.ChatCompletion.create(model="gpt-3.5-turbo",
+        completion = openai.ChatCompletion.create(model="ft:gpt-3.5-turbo-0613:personal::888oh06D",
+                                                  temperature=data.temperature,
+                                                  max_tokens=data.max_tokens,
+                                                  presence_penalty=1,
                                                   messages=[
             {
                 "role": "system",
@@ -34,5 +38,7 @@ class TranslationService(AIService):
                 "content": data.user_text
             }
         ])
-        print(completion.choices[0].message.content)
-        return {"translated_text": "translated_data_here"}
+        output = completion.choices[0].message.content
+        logger.info("Request and response json", extra={"payload": data.dict(), "output": output})
+
+        return {"output": output}

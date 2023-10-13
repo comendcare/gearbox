@@ -12,7 +12,9 @@ class ToneEnum(str, Enum):
 class TaskData(BaseModel):
     user_text: str
     preset: str
-    readability: int
+    temperature: float
+    readability: float
+    max_tokens: int
     tone: ToneEnum
 
 
