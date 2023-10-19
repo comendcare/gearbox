@@ -4,7 +4,8 @@
     "log_filename": "logs/logs.json"
   },
   "model_config": {
-    "model_name": "ft:gpt-3.5-turbo-0613:personal::888oh06D",
-    "presence_penalty": 1
+    "model_name": "gpt-4",
+    "presence_penalty": 1,
+    "stop_sequences": ["Human:", "AI:"]
   }
 }

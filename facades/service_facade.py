@@ -14,7 +14,6 @@ class ServiceFacade:
         :return:
         """
         service = self.factory.create_service(request_data.task)
-        print(request_data)
         if service:
             return service.execute(request_data.data)
         else:

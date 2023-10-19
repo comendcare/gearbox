@@ -1,9 +1,8 @@
 class PromptBuilder:
     def __init__(self):
         self.prompt = """You are a highly skilled AI trained in language comprehension and simplification. 
-        I would like you to read the following text and simplify it.
-        Remember the key here is to simplify, not necessarily summarize.
-        Follow the same structure and logic as the input and elaborate on key concepts and terminology as needed."""
+                        I would like you to read the following text and simplify it. 
+                        Remember the key here is to simplify, not necessarily summarize."""
 
     def add_audience(self, audience):
         match audience:
@@ -19,7 +18,7 @@ class PromptBuilder:
                                     a step by step process. Compare the content to similar research."""
             case "INDUSTRY":
                 self.prompt += """ You are an industry professional. Someone in business or product development. 
-                                    Summarize the potential products that could be derived and asses the feasibility of 
+                                    Identify the potential products that could be derived and asses the feasibility of 
                                     these products. Identify existing products and more business focused insights."""
             case "INVESTOR":
                 self.prompt += """ You are a potential investor. You are considering investing or funding a project on 
@@ -67,19 +66,23 @@ class PromptBuilder:
         return self
 
     def add_readability_score(self, score):
-        min_gunning_fog = 6  # Most readable
-        gunning_fog_range = 14  # 6+14 = 20 a.k.a least readable
-        mapped_value = min_gunning_fog + (score * gunning_fog_range)
-        gf_index_score = round(mapped_value, 2)
+        # min_gunning_fog = 6  # Most readable
+        # gunning_fog_range = 14  # 6+14 = 20 a.k.a least readable
+        # mapped_value = min_gunning_fog + (score * gunning_fog_range)
+        # gf_index_score = round(mapped_value, 2)
 
-        min_fk_score = 100  # Most readable
-        max_fk_score = 0  # Least readable
-        fk_range = min_fk_score - max_fk_score
-        mapped_value = min_fk_score - ((10 - score) * fk_range)
-        fk_index_score = round(mapped_value, 2)
+        # Define the ranges for user score and Gunning Fog score
+        user_min, user_max = 0, 10
+        fog_min, fog_max = 20, 0  # Reversed scale
+
+        # Apply the linear transformation
+        gf_index_score = ((score - user_min) * (fog_max - fog_min) / (user_max - user_min)) + fog_min
+
+        fk_index_score = score * 10
 
         self.prompt += f" Aim for a gunning fog readability index score of {gf_index_score}."
         self.prompt += f" Aim for a felsch kinkaid readability index score of {fk_index_score}."
+
         return self
 
     def add_tone(self, tone):
@@ -87,4 +90,4 @@ class PromptBuilder:
         return self
 
     def build(self):
-        return self.prompt
+        return ' '.join(self.prompt.strip().split())

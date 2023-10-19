@@ -32,7 +32,8 @@ class TranslationService(AIService):
         completion = openai.ChatCompletion.create(model=self.model_config["model_name"],
                                                   temperature=data.temperature,
                                                   max_tokens=data.max_tokens,
-                                                  presence_penalty=1,
+                                                  presence_penalty=self.model_config["presence_penalty"],
+                                                  stop=self.model_config["stop_sequences"],
                                                   messages=[
             {
                 "role": "system",
