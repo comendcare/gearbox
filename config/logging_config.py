@@ -1,12 +1,16 @@
 import logging
 import json
 import os
+from config.global_config import config
+
+logging_config = config["logging_config"]
 
 
 class JsonFormatter(logging.Formatter):
     def format(self, record):
         message = record.getMessage()  # Retrieve the message
         payload = getattr(record, 'payload', None)  # Get extra payload, if any
+        prompt = getattr(record, 'prompt', None)  # Get extra output, if any
         output = getattr(record, 'output', None)  # Get extra output, if any
 
         obj = {
@@ -15,6 +19,7 @@ class JsonFormatter(logging.Formatter):
             'message': message,
             'payload': payload,  # Include the payload in log
             'output': output,  # Include the output in log
+            'prompt': prompt,  # Include the output in log
             'name': record.name,
             'filename': record.filename,
         }
@@ -41,18 +46,18 @@ class JsonFileHandler(logging.FileHandler):
                 json.dump([json.loads(log_entry)], f, indent=4)  # Indent the JSON objects by 4 spaces
 
 # Initialize the log file if it doesn't exist or is empty
-if not os.path.exists('logs/logs.json') or os.path.getsize('logs/logs.json') == 0:
-    with open('logs/logs.json', 'w') as f:
+if not os.path.exists(logging_config["log_filename"]) or os.path.getsize(logging_config["log_filename"]) == 0:
+    with open(logging_config["log_filename"], 'w') as f:
         json.dump([], f)
 
 # Initialize the logger
-logger = logging.getLogger('json_logger')
+logger = logging.getLogger(logging_config["logger_name"])
 
 # Set the log level
 logger.setLevel(logging.DEBUG)
 
 # Create a custom file handler
-file_handler = JsonFileHandler('logs/logs.json')
+file_handler = JsonFileHandler(logging_config["log_filename"])
 
 # Create an instance of the custom formatter
 json_formatter = JsonFormatter()

@@ -1,17 +1,39 @@
 from pydantic import BaseModel
+from typing import Optional
 from enum import Enum
+
+class TaskEnum(str, Enum):
+    translation = "TRANSLATION"
+
+
+class AudienceEnum(str, Enum):
+    family = "FAMILY"
+    scientist = "SCIENTIST"
+    industry = "INDUSTRY"
+    investor = "INVESTOR"
+
+
+class PresetEnum(str, Enum):
+    simplify = "SIMPLIFY"
+    terminology = "TERMINOLOGY"
+    applications = "APPLICATIONS"
+    optimistic = "OPTIMISTIC"
+    analyzed = "ANALYZED"
+    takeaways = "TAKEAWAYS"
+    questions = "QUESTIONS"
 
 
 class ToneEnum(str, Enum):
-    empathetic = "empathetic"
-    informative = "informative"
-    positive = "positive"
-    realistic = "realistic"
+    empathetic = "EMPATHETIC"
+    informative = "INFORMATIVE"
+    positive = "POSITIVE"
+    realistic = "REALISTIC"
 
 
-class TaskData(BaseModel):
+class ConfigData(BaseModel):
     user_text: str
-    preset: str
+    preset: Optional[PresetEnum]
+    audience: Optional[AudienceEnum]
     temperature: float
     readability: float
     max_tokens: int
@@ -19,6 +41,6 @@ class TaskData(BaseModel):
 
 
 class TaskModel(BaseModel):
-    type: str
-    data: TaskData
+    task: TaskEnum
+    data: ConfigData
 

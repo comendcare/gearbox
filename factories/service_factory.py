@@ -8,7 +8,7 @@ from services.content_generation_service import ContentGenerationService
 # Factory to create instances of different AI services
 class ServiceFactory:
     def create_service(self, type):
-        if type == "translation":
+        if type == "TRANSLATION":
             return TranslationService()
         elif type == "content_moderation":
             return ContentModerationService()

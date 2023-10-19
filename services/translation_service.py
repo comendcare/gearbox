@@ -4,6 +4,7 @@ from services import AIService
 from dotenv import load_dotenv
 from builders.prompt_builder import PromptBuilder
 from config.logging_config import logger
+from config.global_config import config
 load_dotenv()
 
 
@@ -12,11 +13,15 @@ openai.Model.list()
 
 
 class TranslationService(AIService):
+    def __init__(self):
+        self.model_config = config["model_config"]
+
     def execute(self, data):
         # Build prompt
         builder = PromptBuilder()
         prompt = (
             builder
+            .add_audience(data.audience)
             .add_preset(data.preset)
             .add_readability_score(data.readability)
             .add_tone(data.tone)
@@ -24,7 +29,7 @@ class TranslationService(AIService):
         )
 
         # Actual logic or API calls for translation
-        completion = openai.ChatCompletion.create(model="ft:gpt-3.5-turbo-0613:personal::888oh06D",
+        completion = openai.ChatCompletion.create(model=self.model_config["model_name"],
                                                   temperature=data.temperature,
                                                   max_tokens=data.max_tokens,
                                                   presence_penalty=1,
@@ -39,6 +44,6 @@ class TranslationService(AIService):
             }
         ])
         output = completion.choices[0].message.content
-        logger.info("Request and response json", extra={"payload": data.dict(), "output": output})
+        logger.info("Request and response json", extra={"payload": data.dict(), "prompt": prompt, "output": output})
 
         return {"output": output}

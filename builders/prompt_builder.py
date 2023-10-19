@@ -5,28 +5,53 @@ class PromptBuilder:
         Remember the key here is to simplify, not necessarily summarize.
         Follow the same structure and logic as the input and elaborate on key concepts and terminology as needed."""
 
+    def add_audience(self, audience):
+        match audience:
+            case "FAMILY":
+                self.prompt += """ You are talking to a family member or perhaps even a subject personally affected by 
+                                    the topic of the content. Respectfully and with dignity, explain the content as if 
+                                    you were speaking to a newcomer to the topic. Identify the key terminology and 
+                                    concepts in point form and explain each using analogies and comparisons. Break down 
+                                    the acronyms and medical jargon, taking extra care to be accurate and correct. """
+            case "SCIENTIST":
+                self.prompt += """ You are talking to a scientist, or someone who is extremely knowledgeable in the 
+                                    topic of this content. Summarize the findings. If there is a method, distill it into 
+                                    a step by step process. Compare the content to similar research."""
+            case "INDUSTRY":
+                self.prompt += """ You are an industry professional. Someone in business or product development. 
+                                    Summarize the potential products that could be derived and asses the feasibility of 
+                                    these products. Identify existing products and more business focused insights."""
+            case "INVESTOR":
+                self.prompt += """ You are a potential investor. You are considering investing or funding a project on 
+                                    the topic of this content. Have a paragraph highlighting how a potential investment 
+                                    can support this research and those it affects."""
+            case _:
+                # If an audience isn't defined, just skip it. In this case, a preset should be provided.
+                pass
+        return self
+
     def add_preset(self, preset):
         match preset:
-            case "simplify":
+            case "SIMPLIFY":
                 self.prompt += """ Respectfully and with dignity, explain the content as if you were speaking to a 
                                     newcomer to the topic."""
-            case "terminology":
+            case "TERMINOLOGY":
                 self.prompt += """ Identify the key terminology and concepts in point form and explain each using 
                                     analogies and comparisons. Break down the acronyms and medical jargon, taking extra 
                                     care to be as accurate and correct as possible."""
-            case "applications":
+            case "APPLICATIONS":
                 self.prompt += """ Describe the applications of the content, and the implications that this research 
                                     has on the field. Answer with why this research is important and necessary."""
-            case "optimistic":
+            case "OPTIMISTIC":
                 self.prompt += """ Optimistically identify the directions that this research can go, and the potential 
                                     benefits for the user."""
-            case "analyzed":
+            case "ANALYZED":
                 self.prompt += """ Objectively and realistically analyze the key results and outcomes of the content. 
                                     list the most promising and clear statistics if provided in the content."""
-            case "takeaways":
+            case "TAKEAWAYS":
                 self.prompt += """ List the key takeaways from the content. They should be comprehensive and make no 
                                     inferences beyond that the information provided in the content."""
-            case "takeaways":
+            case "QUESTIONS":
                 self.prompt += """ Answer the 6 questions in a list: 
                                      (1) What do the author(s) want to know (motivation)?
                                      (2) What did they do (approach/methods)?
@@ -37,7 +62,8 @@ class PromptBuilder:
                                      (Regarding this last question, the author(s) may provide some suggestions in the 
                                      discussion, but the key is to ask yourself what you think should come next.) """
             case _:
-                print("The language doesn't matter, what matters is solving problems.")
+                # If a preset isn't defined or doesn't match, just skip it. In this case, an audience should be provided.
+                pass
         return self
 
     def add_readability_score(self, score):
@@ -49,7 +75,7 @@ class PromptBuilder:
         min_fk_score = 100  # Most readable
         max_fk_score = 0  # Least readable
         fk_range = min_fk_score - max_fk_score
-        mapped_value = min_fk_score - ((1 - score) * fk_range)
+        mapped_value = min_fk_score - ((10 - score) * fk_range)
         fk_index_score = round(mapped_value, 2)
 
         self.prompt += f" Aim for a gunning fog readability index score of {gf_index_score}."
@@ -57,7 +83,7 @@ class PromptBuilder:
         return self
 
     def add_tone(self, tone):
-        self.prompt += f"Write with a {tone} tone."
+        self.prompt += f" Write with a {tone.lower()} tone."
         return self
 
     def build(self):
