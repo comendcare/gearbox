@@ -45,26 +45,30 @@ class JsonFileHandler(logging.FileHandler):
             with open(self.baseFilename, 'w') as f:
                 json.dump([json.loads(log_entry)], f, indent=4)  # Indent the JSON objects by 4 spaces
 
-# Initialize the log file if it doesn't exist or is empty
-if not os.path.exists(logging_config["log_filename"]) or os.path.getsize(logging_config["log_filename"]) == 0:
-    with open(logging_config["log_filename"], 'w') as f:
-        json.dump([], f)
-
-# Initialize the logger
+# Always Initialize the logger
 logger = logging.getLogger(logging_config["logger_name"])
 
-# Set the log level
-logger.setLevel(logging.DEBUG)
+if os.environ.get('ENVIRONMENT') != 'production':
+    # Initialize the log file if it doesn't exist or is empty
+    if not os.path.exists(logging_config["log_filename"]) or os.path.getsize(logging_config["log_filename"]) == 0:
+        with open(logging_config["log_filename"], 'w') as f:
+            json.dump([], f)
 
-# Create a custom file handler
-file_handler = JsonFileHandler(logging_config["log_filename"])
+    # Set the log level
+    logger.setLevel(logging.DEBUG)
 
-# Create an instance of the custom formatter
-json_formatter = JsonFormatter()
+    # Create a custom file handler
+    file_handler = JsonFileHandler(logging_config["log_filename"])
 
-# Set the formatter for the file handler
-file_handler.setFormatter(json_formatter)
+    # Create an instance of the custom formatter
+    json_formatter = JsonFormatter()
 
-# Add the file handler to the logger
-logger.addHandler(file_handler)
+    # Set the formatter for the file handler
+    file_handler.setFormatter(json_formatter)
 
+    # Add the file handler to the logger
+    logger.addHandler(file_handler)
+else:
+    # In production, you could either set up a different logging mechanism here
+    # or use a "null handler" to discard logs.
+    logger.addHandler(logging.NullHandler())

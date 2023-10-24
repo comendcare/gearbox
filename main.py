@@ -1,13 +1,16 @@
+import os
 from flask import Flask, jsonify, request
 from pydantic import ValidationError
 from models import TaskModel
 from flask_cors import CORS
 
-
 from facades.service_facade import ServiceFacade  # Import from facades package
 
 app = Flask(__name__)
-CORS(app)
+CORS(app,
+     # resources={r"/task": {"origins": "https://livery.vercel.app"}},
+     origins=["https://livery.vercel.app"],
+     debug=os.environ.get('ENVIRONMENT') == 'development')
 ai_facade = ServiceFacade()
 
 
