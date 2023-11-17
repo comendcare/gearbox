@@ -1,15 +1,15 @@
 import os
+import asyncio
 from flask import Flask, jsonify, request
 from pydantic import ValidationError
 from models import TaskModel
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 
 from facades.service_facade import ServiceFacade  # Import from facades package
 
 app = Flask(__name__)
 CORS(app,
-     # resources={r"/task": {"origins": "https://livery.vercel.app"}},
-     origins=["https://livery.vercel.app"],
+     resources={r"/task": {"origins": "https://livery.vercel.app"}},
      debug=os.environ.get('ENVIRONMENT') == 'development')
 ai_facade = ServiceFacade()
 
@@ -23,10 +23,10 @@ def task():
     except ValidationError as e:
         return jsonify({"error": e.errors()}), 400
 
-    result = ai_facade.perform_task(validated_request_data)
+    result = asyncio.run(ai_facade.perform_task(validated_request_data))
 
     return jsonify(result)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=os.environ.get('ENVIRONMENT') == 'development')

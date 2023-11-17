@@ -16,7 +16,7 @@ class TranslationService(AIService):
     def __init__(self):
         self.model_config = config["model_config"]
 
-    def execute(self, data):
+    async def execute(self, data):
         # Build prompt
         builder = PromptBuilder()
         prompt = (
@@ -29,7 +29,7 @@ class TranslationService(AIService):
         )
 
         # Actual logic or API calls for translation
-        completion = openai.ChatCompletion.create(model=self.model_config["model_name"],
+        completion = await openai.ChatCompletion.acreate(model=self.model_config["model_name"],
                                                   temperature=data.temperature,
                                                   max_tokens=data.max_tokens,
                                                   presence_penalty=self.model_config["presence_penalty"],
