@@ -1,4 +1,4 @@
-class PromptBuilder:
+class TranslationPromptBuilder:
     def __init__(self):
         self.prompt = """You are a highly skilled AI trained in language comprehension and simplification. 
                         I would like you to read the following text and simplify it. 

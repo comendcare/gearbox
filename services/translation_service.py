@@ -2,7 +2,7 @@ import os
 import openai
 from services import AIService
 from dotenv import load_dotenv
-from builders.prompt_builder import PromptBuilder
+from builders.translation_prompt_builder import TranslationPromptBuilder
 from config.logging_config import logger
 from config.global_config import config
 load_dotenv()
@@ -18,7 +18,7 @@ class TranslationService(AIService):
 
     async def execute(self, data):
         # Build prompt
-        builder = PromptBuilder()
+        builder = TranslationPromptBuilder()
         prompt = (
             builder
             .add_audience(data.audience)
