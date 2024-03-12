@@ -1,4 +1,5 @@
 """Factories following the factory design pattern"""
+from services.illustration_service import IllustrationService
 from services.translation_service import TranslationService
 from services.content_moderation_service import ContentModerationService
 from services.question_answering_service import QuestionAnsweringService
@@ -13,6 +14,8 @@ class ServiceFactory:
             return TranslationService()
         elif type == "Q&A":
             return QuestionAnsweringService()
+        elif type == "ILLUSTRATION":
+            return IllustrationService()
         elif type == "content_moderation":
             return ContentModerationService()
         elif type == "content_generation":

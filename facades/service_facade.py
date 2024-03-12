@@ -1,5 +1,6 @@
 from factories.service_factory import ServiceFactory
-from models import TaskModel
+from models import TranslateModel, IllustrateModel
+from typing import Union
 
 
 # Facade to simplify interaction and encapsulate the AI services
@@ -7,7 +8,7 @@ class ServiceFacade:
     def __init__(self):
         self.factory = ServiceFactory()
 
-    async def perform_task(self, request_data: TaskModel):
+    async def perform_task(self, request_data: Union[TranslateModel, IllustrateModel]):
         """
 
         :param request_data:

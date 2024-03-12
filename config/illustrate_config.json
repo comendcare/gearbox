@@ -1,0 +1,9 @@
+{
+  "logging_config": {
+    "logger_name": "json_logger",
+    "log_filename": "logs/logs.json"
+  },
+  "model_config": {
+    "quality": "standard"
+  }
+}
