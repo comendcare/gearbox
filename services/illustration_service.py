@@ -1,5 +1,7 @@
 import os
 import openai
+
+from builders.illustration_prompt_builder import IllustrationPromptBuilder
 from services import AIService
 from dotenv import load_dotenv
 from builders.translation_prompt_builder import TranslationPromptBuilder
@@ -25,10 +27,17 @@ class IllustrationService(AIService):
         return size_dict[image_size]
 
     async def execute(self, data):
+        builder = IllustrationPromptBuilder()
+        prompt = (
+            builder
+            .add_style(data.style)
+            .build()
+        )
+
         # Actual logic or API calls for illustrations
         illustrations = await openai.Image.acreate(
             model=data.model_name,
-            prompt=data.prompt,
+            prompt=prompt,
             n=data.num_illustrations,
             size=self.image_size_to_resolution(data.image_size)
         )

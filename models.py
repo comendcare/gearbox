@@ -12,7 +12,9 @@ class AudienceEnum(str, Enum):
     family = "FAMILY"
     scientist = "SCIENTIST"
     industry = "INDUSTRY"
-    investor = "INVESTOR"
+    donor = "DONOR"
+    wikipedia = "WIKIPEDIA"
+    socials = "SOCIALS"
 
 
 class PresetEnum(str, Enum):
@@ -30,6 +32,11 @@ class ToneEnum(str, Enum):
     informative = "INFORMATIVE"
     positive = "POSITIVE"
     realistic = "REALISTIC"
+
+class StyleEnum(str, Enum):
+    vector = "VECTOR"
+    realistic = "REALISTIC"
+    artistic = "ARTISTIC"
 
 
 class ImageSizeEnum(str, Enum):
@@ -51,7 +58,9 @@ class TranslationConfigData(BaseModel):
 class IllustrationConfigData(BaseModel):
     model_name: str
     prompt: str
-    num_illustrations: int = Field(..., ge=0, le=10)
+    model_name: str
+    style: StyleEnum
+    num_illustrations: int = Field(..., ge=1, le=10)
     image_size: ImageSizeEnum
 
 

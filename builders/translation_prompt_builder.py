@@ -2,7 +2,8 @@ class TranslationPromptBuilder:
     def __init__(self):
         self.prompt = """You are a highly skilled AI trained in language comprehension and simplification. 
                         I would like you to read the following text and simplify it. 
-                        Remember the key here is to simplify, not necessarily summarize."""
+                        Remember the key here is to simplify, not necessarily summarize.
+                        Provide only the output don't reply as if you're talking to someone."""
 
     def add_audience(self, audience):
         match audience:
@@ -20,10 +21,17 @@ class TranslationPromptBuilder:
                 self.prompt += """ You are an industry professional. Someone in business or product development. 
                                     Identify the potential products that could be derived and asses the feasibility of 
                                     these products. Identify existing products and more business focused insights."""
-            case "INVESTOR":
+            case "DONOR":
                 self.prompt += """ You are a potential investor. You are considering investing or funding a project on 
                                     the topic of this content. Have a paragraph highlighting how a potential investment 
                                     can support this research and those it affects."""
+            case "WIKIPEDIA":
+                self.prompt += """ You are are writing a Wikipedia article on the prompt. Structure the output 
+                                    chronologically, in a way that can be easily understood by any reader. Use headings, 
+                                    reference real world events and relevant contextual information."""
+            case "SOCIALS":
+                self.prompt += """ Write a caption appropriate for use on Instagram, Facebook, Twitter, and LinkedIn. 
+                                    Keep it succinct and to the point."""
             case _:
                 # If an audience isn't defined, just skip it. In this case, a preset should be provided.
                 pass
@@ -91,3 +99,4 @@ class TranslationPromptBuilder:
 
     def build(self):
         return ' '.join(self.prompt.strip().split())
+
