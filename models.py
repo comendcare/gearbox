@@ -34,6 +34,7 @@ class ToneEnum(str, Enum):
     realistic = "REALISTIC"
 
 class StyleEnum(str, Enum):
+    any = "ANY"
     vector = "VECTOR"
     realistic = "REALISTIC"
     artistic = "ARTISTIC"

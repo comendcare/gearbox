@@ -37,7 +37,7 @@ class IllustrationService(AIService):
         # Actual logic or API calls for illustrations
         illustrations = await openai.Image.acreate(
             model=data.model_name,
-            prompt=prompt,
+            prompt=prompt + " Your prompt is: " + data.prompt,
             n=data.num_illustrations,
             size=self.image_size_to_resolution(data.image_size)
         )

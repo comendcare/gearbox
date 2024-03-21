@@ -31,7 +31,7 @@ def translate():
 def illustrate():
     request_data = request.get_json()
 
-    print(request_data)
+    # print(request_data)
     try:
         validated_request_data = IllustrateModel(**request_data)
     except ValidationError as e:
