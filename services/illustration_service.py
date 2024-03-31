@@ -34,14 +34,17 @@ class IllustrationService(AIService):
             .build()
         )
 
+        prompt = prompt + " Your prompt is: " + data.prompt
+
         # Actual logic or API calls for illustrations
         illustrations = await openai.Image.acreate(
             model=data.model_name,
-            prompt=prompt + " Your prompt is: " + data.prompt,
+            quality="hd" if data.model_name == "dall-e-3" else "standard",
+            prompt=prompt,
             n=data.num_illustrations,
             size=self.image_size_to_resolution(data.image_size)
         )
         output = illustrations.data
-        logger.info("Request and response json", extra={"payload": data.dict(), "prompt": data.prompt, "output": output})
+        logger.info("Request and response json", extra={"payload": data.dict(), "prompt": prompt, "output": output})
 
         return {"output": illustrations}
