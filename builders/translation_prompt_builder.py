@@ -1,22 +1,27 @@
 class TranslationPromptBuilder:
     def __init__(self):
         self.prompt = """You are a highly skilled AI trained in language comprehension and simplification. 
-                        I would like you to read the following text and simplify it. 
+                        I would like you to read the following text and simplify it. Do not use first person.
                         Remember the key here is to simplify, not necessarily summarize.
                         Provide only the output don't reply as if you're talking to someone."""
 
     def add_audience(self, audience):
         match audience:
             case "FAMILY":
-                self.prompt += """ You are talking to a family member or perhaps even a subject personally affected by 
-                                    the topic of the content. Respectfully and with dignity, explain the content as if 
-                                    you were speaking to a newcomer to the topic. Identify the key terminology and 
-                                    concepts in point form and explain each using analogies and comparisons. Break down 
-                                    the acronyms and medical jargon, taking extra care to be accurate and correct. """
+                self.prompt += """ You are talking to a family member or perhaps even a subject personally affected by
+                                    the topic of the content. Explain the content as if you were speaking to a newcomer
+                                    to the topic. Identify the key terminology and concepts and explain each using
+                                    analogies and comparisons. Break down the acronyms and medical jargon, taking extra
+                                    care to be accurate and correct."""
+                # self.prompt += ""
             case "SCIENTIST":
                 self.prompt += """ You are talking to a scientist, or someone who is extremely knowledgeable in the 
                                     topic of this content. Summarize the findings. If there is a method, distill it into 
-                                    a step by step process. Compare the content to similar research."""
+                                    a step by step process. Compare the content to similar research. Be objecive and 
+                                    empirical, make the potential limitations of the content clear. Use headings, bold 
+                                    and italic fonts, bullet points, numbered lists, hyperlinks, quote the paper, and 
+                                    use other rich text. Write your output in Markdown. Cite your sources with 
+                                    hyperlinks."""
             case "INDUSTRY":
                 self.prompt += """ You are an industry professional. Someone in business or product development. 
                                     Identify the potential products that could be derived and asses the feasibility of 
@@ -28,10 +33,14 @@ class TranslationPromptBuilder:
             case "WIKIPEDIA":
                 self.prompt += """ You are are writing a Wikipedia article on the prompt. Structure the output 
                                     chronologically, in a way that can be easily understood by any reader. Use headings, 
-                                    reference real world events and relevant contextual information."""
+                                    reference real world events outside of the provided content and relevant contextual 
+                                    information. Use headings, bold and italic fonts, bullet points, numbered lists, 
+                                    hyperlinks, quote the paper, and use other rich text. Write your output in Markdown. 
+                                    Cite your sources with hyperlinks."""
             case "SOCIALS":
                 self.prompt += """ Write a caption appropriate for use on Instagram, Facebook, Twitter, and LinkedIn. 
-                                    Keep it succinct and to the point."""
+                                    Keep it succinct and to the point. Output must be less than 50 words. 
+                                    If appropriate, provide a list of hashtags."""
             case _:
                 # If an audience isn't defined, just skip it. In this case, a preset should be provided.
                 pass

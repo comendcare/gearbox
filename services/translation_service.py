@@ -28,13 +28,7 @@ class TranslationService(AIService):
             .build()
         )
 
-        # Actual logic or API calls for translation
-        completion = await openai.ChatCompletion.acreate(model=self.model_config["model_name"],
-                                                  temperature=data.temperature,
-                                                  max_tokens=data.max_tokens,
-                                                  presence_penalty=self.model_config["presence_penalty"],
-                                                  stop=self.model_config["stop_sequences"],
-                                                  messages=[
+        messages = [
             {
                 "role": "system",
                 "content": prompt
@@ -43,8 +37,17 @@ class TranslationService(AIService):
                 "role": "user",
                 "content": data.user_text
             }
-        ])
+        ]
+
+        # Actual logic or API calls for translation
+        completion = await openai.ChatCompletion.acreate(model=self.model_config["model_name"],
+                                                  temperature=data.temperature,
+                                                  max_tokens=data.max_tokens,
+                                                  presence_penalty=self.model_config["presence_penalty"],
+                                                  stop=self.model_config["stop_sequences"],
+                                                  messages=messages)
+
         output = completion.choices[0].message.content
-        logger.info("Request and response json", extra={"payload": data.dict(), "prompt": prompt, "output": output})
+        logger.info("Request and response json", extra={"payload": data.dict(), "prompt": messages, "output": output})
 
         return {"output": output}
