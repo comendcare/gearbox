@@ -2,7 +2,7 @@ import os
 import asyncio
 from flask import Flask, jsonify, request
 from pydantic import ValidationError
-from models import TranslateModel, IllustrateModel
+from models import TranslateModel, IllustrateModel, AssistantModel, FileModel
 from flask_cors import CORS, cross_origin
 
 from facades.service_facade import ServiceFacade  # Import from facades package
@@ -31,9 +31,34 @@ def translate():
 def illustrate():
     request_data = request.get_json()
 
-    # print(request_data)
     try:
         validated_request_data = IllustrateModel(**request_data)
+    except ValidationError as e:
+        return jsonify({"error": e.errors()}), 400
+
+    result = asyncio.run(ai_facade.perform_task(validated_request_data))
+
+    return jsonify(result)
+
+@app.route('/assistant', methods=['POST'])
+def assistant():
+    request_data = request.get_json()
+
+    try:
+        validated_request_data = AssistantModel(**request_data)
+    except ValidationError as e:
+        return jsonify({"error": e.errors()}), 400
+
+    result = asyncio.run(ai_facade.perform_task(validated_request_data))
+
+    return jsonify(result)
+
+@app.route('/file', methods=['POST'])
+def file():
+    request_data = request.get_json()
+
+    try:
+        validated_request_data = FileModel(**request_data)
     except ValidationError as e:
         return jsonify({"error": e.errors()}), 400
 
