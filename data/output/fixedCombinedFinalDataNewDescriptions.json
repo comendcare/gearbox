@@ -1,0 +1,565 @@
+[
+  {
+    "url": "https://www.amiculum.biz/",
+    "scientistDotComURL": "https://app.scientist.com/providers/mudskipper",
+    "title": "AMICULUM",
+    "description": "AMICULUM is an independent family of 11 branded agencies that deliver communications and consultancy services to pharmaceutical, biotechnology and health technology companies across the world. What makes us different is our agile and highly collaborative approach, which allows us to put together the right expertise from across our business to deliver high-quality, technically accurate and compelling content for different audiences, through the selective use of key communication channels.\r\n\r\nAMICULUM has grown steadily since 2001 with significant repeat business from our clients and recommendations from the leading experts we have worked with. We now have a team of over &gt;350 healthcare communications professionals based in Europe, Asia-Pacific, MENA, and the USA.",
+    "yearEstablished": "2001",
+    "website": "amiculum.biz",
+    "headquarters": "Bollington, Cheshire, GB",
+    "companyType": "Mid-Sized Business (10-100M TTM Revenue)",
+    "professionalAssociates": null,
+    "sites": [
+      {
+        "name": "AMICULUM",
+        "address": "26 The Quadrant Richmond, TW9 United Kingdom"
+      },
+      {
+        "name": "AMICULUM",
+        "address": "233 South Wacker Drive Chicago, IL, 60606 United States"
+      },
+      {
+        "name": "AMICULUM",
+        "address": "The Concourse Singapore Singapore"
+      },
+      {
+        "name": "AMICULUM",
+        "address": "The Boathouse Clarence Mill Bollington, CHeshire, SK10 5JZ United Kingdom"
+      },
+      {
+        "name": "AMICULUM",
+        "address": "100 Overlook Center Princeton, NJ, 08540 United States"
+      },
+      {
+        "name": "AMICULUM",
+        "address": "274 Banbury Road England, OX2 7DY United Kingdom"
+      },
+      {
+        "name": "AMICULUM",
+        "address": "Basel, BS Switzerland"
+      },
+      {
+        "name": "AMICULUM",
+        "address": "Dubai, Dubai United Arab Emirates"
+      },
+      {
+        "name": "AMICULUM",
+        "address": "The Boathouse Clarence Mill Bollington, Cheshire, SK10 5JZ United Kingdom"
+      }
+    ],
+    "services": [
+      {
+        "name": "Abstracts",
+        "description": "Request services related to the writing and review of abstracts"
+      },
+      {
+        "name": "Biostatistical Design",
+        "description": "Use statistics to ensure appropriate pre-clinical and clinical study design."
+      },
+      {
+        "name": "Clinical Protocol Design & Development",
+        "description": "Creation of clinical protocol document which details how a clinical trial is designed, relating to to the methodology, hypothesis, and operation of clinical trial to ensure the safety of the patients is maintained as well as maintaining the integrity of the data collected during the trial."
+      },
+      {
+        "name": "Clinical Trial Design",
+        "description": "Develop study-related protocols, case report forms (CRFs) and database tools for records management."
+      },
+      {
+        "name": "Clinical or Speaker Training Webinar Slide Decks",
+        "description": "Develop and design slide decks for clinical or speak training webinars."
+      },
+      {
+        "name": "Consensus reports",
+        "description": "Develop and submit a report that is a comprehensive examination by an expert panel of a scientific or medical issue."
+      },
+      {
+        "name": "Data Visualization",
+        "description": "Visualize data collected from clinical trials and/or clinical research."
+      },
+      {
+        "name": "Emerging Market Opportunities",
+        "description": "Analyze risks and opportunities in new markets and ensure patients have timely and continued access to new treatments."
+      },
+      {
+        "name": "Formulary & Reimbursement Strategy",
+        "description": "Develop strategy and narrative to gain formulary access on insurance plans."
+      },
+      {
+        "name": "HCP/KOL Engagement Communications",
+        "description": "Develop effective medical communications that engage Key Opinion Leader and or Health Care Providers."
+      },
+      {
+        "name": "HTA Evidence Preparation/Strategy Dossier Development",
+        "description": "Perform evidence preparation and/or create strategies for the systematic evaluation of the properties, effects, and/or impacts of health care technology."
+      },
+      {
+        "name": "Health & Pharmacoeconomics",
+        "description": "Identify, measure and compare the cost-benefit ratio of products and services."
+      },
+      {
+        "name": "Health Technology Assessment Submission (HTA Submission)",
+        "description": "Analyze the medical, social, ethical, humanistic, and economic considerations of a drug, medical device, or clinical procedures. Submissions are sent to regulatory agencies with different requirements that govern submissions. See also AMCP and Value Dossier."
+      },
+      {
+        "name": "Life Cycle Assessment (LCA)",
+        "description": "Analyze the lifecycles of the products and services with regard to their environmental impacts."
+      },
+      {
+        "name": "Life Cycle Management",
+        "description": "Plan and strategy of the data collection and information throughout the different phases of product development (portfolio assessment, pre-clinical trials, clinical trials, pre-authorization, post-authorization, and RWE)"
+      },
+      {
+        "name": "Literature Searches/Reviews",
+        "description": "Search through publication databases and conduct reviews."
+      },
+      {
+        "name": "Market Access",
+        "description": "Find general strategies and methods used to market a pharmaceutical product or device."
+      },
+      {
+        "name": "Market Research & Business Intelligence",
+        "description": "Run market feasibility studies, establish customer needs, improve product performance and analyze competition."
+      },
+      {
+        "name": "Marketing and Commercialization",
+        "description": "Identify, promote and prove the value of a particular drug to key stakeholders."
+      },
+      {
+        "name": "Mechanism of Action (MOA) Video Development",
+        "description": "Develop effective educational videos that describe a new pharmaceutical drug's mechanism of action(MOA) as means to educate Physicians and Health Care Providers."
+      },
+      {
+        "name": "Medical Affairs Dossiers",
+        "description": "Develop medical affairs dossiers such as Global Value Dossiers or AMCP Dossiers."
+      },
+      {
+        "name": "Medical Affairs Frequently Asked Questions (FAQs)",
+        "description": "Develop informational documents that contain frequently asked questions and answers regarding a new compound, or medical device."
+      },
+      {
+        "name": "Medical Science Liaison (MSL) External Presentation",
+        "description": "Develop and design Medical Science Liaison External Presentations."
+      },
+      {
+        "name": "Medical Science Liasion (MSL) Training",
+        "description": "Training for medical science liaisons who want to work in pharmaceutical, biotechnology, medical device, and managed care companies."
+      },
+      {
+        "name": "Medical Writing and Editing",
+        "description": "Communicate scientific, technical and health-related information to a range of audiences."
+      },
+      {
+        "name": "Multi-Channel (Digital) Comms",
+        "description": "Request services related to Multi-Channel (Digital) Communication."
+      },
+      {
+        "name": "Payer Directed Communication Tools (other than Dossiers)",
+        "description": "Request services related to payer directed communication tools."
+      },
+      {
+        "name": "Plain Language Summaries",
+        "description": "Request services related to the creation of plain language summaries."
+      },
+      {
+        "name": "Poster Design and Development",
+        "description": "Design and Develop Posters for Poster Symposiums and conferences to effectively convey science information."
+      },
+      {
+        "name": "Pricing Strategy",
+        "description": "Develop value story tailored to a payer audience that will determine the appropriate price for treatment."
+      },
+      {
+        "name": "Publication Planning",
+        "description": "Develop a strategic publication plan that creates an impactful distribution of information regarding a new product."
+      },
+      {
+        "name": "Publication Writing",
+        "description": "Make clear and accurate presentations of scientific and technical data."
+      },
+      {
+        "name": "Review Article/ Submission",
+        "description": "Request services related to the review of articles and aid in the submission of articles to journals."
+      },
+      {
+        "name": "Sales Training Modules",
+        "description": "Develop and distribute sales training modules."
+      },
+      {
+        "name": "Sales Training Webinar Slide Decks",
+        "description": "Develop slide decks for sales training webinars."
+      },
+      {
+        "name": "Value Based Agreements or Outcomes-Based Contracts",
+        "description": "Collaborate with payer or provider to develop a reimbursement plan outside of the traditional fixed cost-per-unit that ties reimbursement or price to actual health outcomes."
+      },
+      {
+        "name": "Value Dossiers Development",
+        "description": "Summary document that presents clinical, economic, and humanistic value of an intervention and associated disease state with the supporting evidence, formulated from the perspective of a particular stakeholder (manufacturer, payer, provider, HTA agency, etc.). See also HTA Submission."
+      }
+    ],
+    "certifications": [
+      {
+        "name": "SBTI - Near/Long  Term Target Set",
+        "files": []
+      }
+    ],
+    "rfis": [
+      {
+        "name": "Commercial Due Diligence",
+        "submittedOn": "April 30, 2024"
+      },
+      {
+        "name": "Real World Evidence (RWE)",
+        "submittedOn": "May 24, 2019"
+      }
+    ]
+  },
+  {
+    "url": "http://www.biocon.com/",
+    "scientistDotComURL": "https://app.scientist.com/providers/biocon-pharmaceuticals",
+    "title": "Biocon Pharmaceuticals",
+    "description": "Biocon Pharmaceuticals offers synthetic chemistry, molecular biology, and APIs.",
+    "yearEstablished": null,
+    "website": "biocon.com",
+    "headquarters": "Bengaluru, KA, IN",
+    "companyType": "Small Business (1-10M TTM Revenue)",
+    "professionalAssociates": null,
+    "sites": [
+      {
+        "name": "Biocon Pharmaceuticals",
+        "address": "13th St Dubai, Dubai United Arab Emirates"
+      },
+      {
+        "name": "Biocon Pharmaceuticals",
+        "address": "Abu Dhabi, Abu Dhabi United Arab Emirates"
+      },
+      {
+        "name": "Biocon Pharmaceuticals",
+        "address": "Nine Elms Ln United Kingdom"
+      },
+      {
+        "name": "Biocon Pharmaceuticals",
+        "address": "U.S. 1 United States"
+      },
+      {
+        "name": "Biocon Pharmaceuticals",
+        "address": "Bengaluru, KA, 560001 India"
+      }
+    ],
+    "services": [],
+    "certifications": [],
+    "rfis": []
+  },
+  {
+    "url": "http://www.clinart.net/",
+    "scientistDotComURL": "https://app.scientist.com/providers/clinart",
+    "title": "ClinArt",
+    "description": "ClinArt provides clinical project management, monitoring, quality assurance, and patient recruitment.",
+    "yearEstablished": null,
+    "website": "clinart.net",
+    "headquarters": "Dubai, Dubai, AE",
+    "companyType": "Small Business (1-10M TTM Revenue)",
+    "professionalAssociates": null,
+    "sites": [
+      {
+        "name": "ClinArt",
+        "address": "Floating Bridge Dubai, Dubai United Arab Emirates"
+      }
+    ],
+    "services": [],
+    "certifications": [],
+    "rfis": []
+  },
+  {
+    "url": "http://www.cpslabs.com/",
+    "scientistDotComURL": "https://app.scientist.com/providers/clinical-pathology-services",
+    "title": "Clinical Pathology Services",
+    "description": "Clinical Pathology Services offers histopathology, cytopathology, serology, hematology, biochemistry, and microbiology services.",
+    "yearEstablished": null,
+    "website": "cpslabs.com",
+    "headquarters": "Dubai, Dubai, AE",
+    "companyType": "Small Business (1-10M TTM Revenue)",
+    "professionalAssociates": null,
+    "sites": [
+      {
+        "name": "Clinical Pathology Services",
+        "address": "Dubai, Dubai United Arab Emirates"
+      }
+    ],
+    "services": [],
+    "certifications": [],
+    "rfis": []
+  },
+  {
+    "url": "https://www.cncpathlab.com/",
+    "scientistDotComURL": "https://app.scientist.com/providers/cnc",
+    "title": "CNC",
+    "description": "Welcome to CNC, a pioneering small business established in 2021 and based in the heart of India, New Delhi. As an innovator in the biomedical sector, we offer a spectrum of services ranging from Biobanking and Clinical Research to Custom Histology and Graphic Design. \n\nOur pride lies in our unique biobank, a treasure trove filled with meticulously cataloged Formalin-Fixed Paraffin-Embedded (FFPE) blocks. These blocks, rich in genetic insights and accompanied by exhaustive pathology reports, are the cornerstone resources for diverse research studies and diagnostic explorations. \n\nFor those interested in genetic deep-dives, our premium FFPE blocks come with mutation analysis. These specimens are extensively genetically characterized, empowering researchers to explore the complex molecular profiles of each sample. Our state-of-the-art Next-Generation Sequencing (NGS) Data Analysis further enhances this research, uncovering hidden genetic intricacies and deepening our understanding of disease mechanisms. \n\nWe also offer specialized FFPE blocks that have undergone Polymerase Chain Reaction (PCR) and Fluorescence In Situ Hybridization (FISH) assays. These specimens provide a focused perspective, facilitating the examination of specific genetic markers and structural modifications with unrivaled precision. \n\nOne of our unique offerings includes tissue specimens, an invaluable resource for longitudinal studies. These allow researchers to correlate molecular shifts in tissue samples with corresponding changes in plasma, thereby providing insights into disease progression and treatment response. \n\nAt CNC, we are passionate about propelling advancements in medical and scientific knowledge. Our diverse collection of high-quality specimens and associated data is curated to accelerate your research endeavors, whether it's cancer research, biomarker discovery or therapeutic development. As a testament to our commitment to quality, we are certified by Good Clinical Practice (GCP). \n\nDiscover the innovative world of CNC, where we catalyze your investigations and drive progress in pathology and beyond.",
+    "yearEstablished": "2021",
+    "website": "cncpathlab.com",
+    "headquarters": "new Delhi, Delhi, IN",
+    "companyType": "Small Business (1-10M TTM Revenue)",
+    "professionalAssociates": null,
+    "sites": [
+      {
+        "name": "CNC PATH LAB",
+        "address": "2E/21 Jhandewalan New Delhi -110055 new Delhi, Delhi, 110055 India"
+      },
+      {
+        "name": "CNC PATH LAB",
+        "address": "2E/21 Jhandewalan New Delhi -110055 new Delhi, Delhi, 110055 India"
+      },
+      {
+        "name": "CNC PATH LAB",
+        "address": "2E/21 Jhandewalan New Delhi -110055 new Delhi, Delhi, 110055 India"
+      },
+      {
+        "name": "CNC PATH LAB",
+        "address": "2E/21 Jhandewalan New Delhi -110055 new Delhi, Delhi, 110055 India"
+      }
+    ],
+    "services": [
+      {
+        "name": "Biobanking",
+        "description": "Store and track biological samples."
+      },
+      {
+        "name": "Clinical Research",
+        "description": "Determine the safety and effectiveness of medications and medical devices."
+      },
+      {
+        "name": "Clinical Trial Consulting",
+        "description": "Consulting services for Clinical trials."
+      },
+      {
+        "name": "Clinical Trial Feasibility",
+        "description": "Request services related to Clinical Trial Design and feasibility."
+      },
+      {
+        "name": "Clinical Trial Integration Analysis",
+        "description": "The process of combining data from multiple clinical trials to understand categories of drugs and drug behavior in a more global way."
+      },
+      {
+        "name": "Clinical Trial Reporting",
+        "description": "Report results of clinical trials to regulatory agencies. This includes participant flow, baseline characteristics, outcome measures, statistical analyses, and adverse events."
+      },
+      {
+        "name": "Cryo-based Histology",
+        "description": "Perform sectioning and histological analysis of frozen non-fixed samples."
+      },
+      {
+        "name": "Custom FFPE cell line blocks",
+        "description": "Custom IHC compatible FFPE cell line blocks and sections"
+      },
+      {
+        "name": "Data and Text Mining",
+        "description": "Derive structured data from free text in order to become accessible for data-mining algorithms."
+      },
+      {
+        "name": "Digital Pathology",
+        "description": "Acquire, manage and interpret pathology information generated from a digital image of a slide preparation of cells or tissue."
+      },
+      {
+        "name": "Endotoxin Testing",
+        "description": "Detect and quantify the presence of endotoxins from gram-negative bacteria."
+      },
+      {
+        "name": "Fresh Functional Human Tissue Permeability Assays",
+        "description": "Use fresh functional human tissue to assess tissue permeability with various compounds."
+      },
+      {
+        "name": "Fresh Functional Human Tissue Vasodilation Assays",
+        "description": "Use fresh functional human tissue to assess vasodilation with various compounds."
+      },
+      {
+        "name": "Graphic Support/ Creative Design",
+        "description": "Develop effective and attention-grabbing pharmaceutical graphics and other design services."
+      },
+      {
+        "name": "HBS Healthy/Controls",
+        "description": "For requesting HBS Healthy/Controls"
+      },
+      {
+        "name": "HBS: Human Biological Samples",
+        "description": "Request human biosamples including tissues, blood, serum, bone marrow, tissue microarrays, etc."
+      },
+      {
+        "name": "Hematoxylin & Eosin (H&E) Staining",
+        "description": "Visualize microscopic structures in cells or tissues."
+      },
+      {
+        "name": "Histology",
+        "description": "Examine by microscopy the anatomy of cells and tissues of clinical patients and animal models."
+      },
+      {
+        "name": "Histopathology",
+        "description": "Evaluate slide preparation of cells or tissues for abnormal features."
+      },
+      {
+        "name": "Human DNA & RNA",
+        "description": "Acquire fresh/frozen Human DNA & RNA based on patient demographics, disease stage, treatment and history"
+      },
+      {
+        "name": "Human Fixed Tissue",
+        "description": "Acquire fresh/frozen Human fixed tissue based on patient demographics, disease stage, history and treatment."
+      },
+      {
+        "name": "Human Fresh Tissue",
+        "description": "For requesting fresh human tissue"
+      },
+      {
+        "name": "Human Frozen Tissue",
+        "description": "For requesting frozen human tissue."
+      },
+      {
+        "name": "Human Immortalized Cell Culture",
+        "description": "For requesting human cells Cell Lines typically refer to legacy immortalised cells, that can be cultured and passaged “indefinitely” Primary Cells are cells that have been isolated from fresh tissue (or cultures) that have not be immortalised and after a certain amount of passaging they will reach senescence. iPSCs, induced pluripotent stem cells, are cells that have (through GM or culturing conditions) have been revert back to the pluripotency state. The original cells can be a cell line or a primary cell."
+      },
+      {
+        "name": "Human Leukopaks",
+        "description": "Obtain enriched leukapheresis-derived products from normal peripheral blood."
+      },
+      {
+        "name": "Human Precision-Cut Lung Slice Model",
+        "description": "Acquire a fresh phenotypically-accurate model to study human lung behavior."
+      },
+      {
+        "name": "Human TMA",
+        "description": "For requesting Human Tissue MicroArrays"
+      },
+      {
+        "name": "Human Whole Organs",
+        "description": "Procure non-transplantable whole human organs or tissues, healthy or diseased, for medical research and development."
+      },
+      {
+        "name": "Immunohistochemistry",
+        "description": "Examine the toxic effects of pre-clinical compounds in small animal and patient histological samples."
+      },
+      {
+        "name": "Infographic",
+        "description": "Create a quick visual representation of information, data or knowledge."
+      },
+      {
+        "name": "Microsatellite Instability Analysis",
+        "description": "Compare allelic profiles and detect genomic instability."
+      },
+      {
+        "name": "Paraffin-based Histology",
+        "description": "Perform sectioning and histological analysis of wax-embedded samples."
+      },
+      {
+        "name": "Resin-based Histology",
+        "description": "Perform sectioning and histological analysis of epoxy/acrylic/polycarbonate-embedded samples."
+      },
+      {
+        "name": "Tissue Microarray",
+        "description": "Screen large numbers of tissues for the presence or absence of specific molecular markers."
+      },
+      {
+        "name": "Virtual Clinical Trial Monitoring Platform",
+        "description": "This digital research platform allows researchers to monitor their clinical trials remotely."
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Good Clinical Practice (GCP)",
+        "files": [
+          {
+            "fileName": "GCP_CERT._CHAIRPE...",
+            "fileUrl": "https://app.scientist.com/secure_attachments/889177a1-1a23-4be1-a4eb-2e024fbd871b"
+          }
+        ]
+      }
+    ],
+    "rfis": [
+      {
+        "name": "Commercial Due Diligence",
+        "submittedOn": "June  3, 2024"
+      },
+      {
+        "name": "Human Biological Samples",
+        "submittedOn": "December  6, 2023"
+      },
+      {
+        "name": "Mass Spectrometry",
+        "submittedOn": "February  6, 2024"
+      },
+      {
+        "name": "HCO/HCI/HCP",
+        "submittedOn": "June  9, 2023"
+      },
+      {
+        "name": "Analytical Testing Services",
+        "submittedOn": "June  9, 2023"
+      },
+      {
+        "name": "HBS used in Services",
+        "submittedOn": "October 26, 2023"
+      }
+    ]
+  },
+  {
+    "url": "http://www.emeacr.org/",
+    "scientistDotComURL": "https://app.scientist.com/providers/europe-middle-east-africa-clinical-research-emeacr",
+    "title": "Europe, Middle East & Africa Clinical Research (EMEACR)",
+    "description": "Europe, Middle East & Africa Clinical Research (EMEACR) is a trailblazing Clinical Research Organization (CRO) that operates from the vibrant city of Dubai. Despite its modest size, EMEACR casts a wide net, providing full-scale clinical research services across the expansive EMEA region. With a keen understanding of the pharmaceutical, biotechnology, and medical device sectors, we have honed our expertise to help our clients fast-track their time-to-market. Our ultimate goal is to facilitate the delivery of safe and efficacious treatments to a global patient population. We are driven by an unwavering commitment to those who need them most, establishing EMEACR as an integral player in the quest for better healthcare solutions.",
+    "yearEstablished": null,
+    "website": "emeacr.org",
+    "headquarters": "Dubai, Dubai, AE",
+    "companyType": "Small Business (1-10M TTM Revenue)",
+    "professionalAssociates": null,
+    "sites": [
+      {
+        "name": "Europe, Middle East & Africa Clinical Research (EMEACR)",
+        "address": "Dubai, Dubai United Arab Emirates"
+      }
+    ],
+    "services": [],
+    "certifications": [],
+    "rfis": []
+  },
+  {
+    "url": "http://www.gmu.ac.ae/",
+    "scientistDotComURL": "https://app.scientist.com/providers/gulf-medical-university",
+    "title": "Gulf Medical University",
+    "description": "Gulf Medical University, located in the heart of Ajman, United Arab Emirates, is an esteemed academic core facility that is committed to fostering a culture of excellence and innovation in the field of healthcare education. Although the year of its establishment is not specified, this distinguished institution has made significant strides in the academic realm. With a focus on a broad range of medical and health science disciplines, Gulf Medical University stands as a beacon of knowledge and advancement in Ajman. The University not only serves Ajman but it also attracts aspiring medical professionals from all over the world, thus creating a diverse and dynamic educational environment. As a key player in the academic landscape, Gulf Medical University continues to make a positive impact on the healthcare sector, one student at a time.",
+    "yearEstablished": null,
+    "website": "gmu.ac.ae",
+    "headquarters": "Ajman, Ajman, AE",
+    "companyType": "Academic Core Facility",
+    "professionalAssociates": null,
+    "sites": [
+      {
+        "name": "Gulf Medical University",
+        "address": "Ajman, Ajman United Arab Emirates"
+      }
+    ],
+    "services": [],
+    "certifications": [],
+    "rfis": []
+  },
+  {
+    "url": "http://www.getzpharmaresearch.com/",
+    "scientistDotComURL": "https://app.scientist.com/providers/getz-pharma-research",
+    "title": "Getz Pharma Research",
+    "description": "Founded in 2006, Getz Pharma Research is a thriving small-scale enterprise headquartered in the vibrant city of Dubai, United Arab Emirates. Also extending its footprint to Karachi, Pakistan, our company's reach is both local and global. We specialize in offering a comprehensive suite of services including impurity profiling, stability testing, active pharmaceutical ingredient (API) formulation development, characterization, and screening. With a keen focus on enhancing the quality of pharmaceutical products, our dedicated team is committed to delivering top-notch solutions that cater to the dynamic needs of the pharmaceutical industry. Over the years, our revenue has consistently grown, now standing at an impressive 1-10 million TTM, a testament to our unwavering commitment to excellence. At Getz Pharma Research, we strive to innovate, excel and lead in the realm of pharmaceutical research, delivering unmatched value to our clients across the globe.",
+    "yearEstablished": "2006",
+    "website": "getzpharmaresearch.com",
+    "headquarters": "Dubai, Dubai, AE",
+    "companyType": "Small Business (1-10M TTM Revenue)",
+    "professionalAssociates": null,
+    "sites": [
+      {
+        "name": "Getz Pharma Research",
+        "address": "Karachi, Sindh Pakistan"
+      },
+      {
+        "name": "Getz Pharma Research",
+        "address": "Dubai, Dubai United Arab Emirates"
+      }
+    ],
+    "services": [],
+    "certifications": [],
+    "rfis": []
+  }
+]
