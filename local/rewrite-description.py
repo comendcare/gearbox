@@ -28,12 +28,9 @@ except (FileNotFoundError, json.JSONDecodeError):
 def generate_description(company):
     """Generate an improved description using OpenAI API, with a fallback to the original."""
     prompt = f"""
-    Given the following structured data about a company, rewrite the description to be informative and natural while preserving its meaning and unique quality. Write in third person objective. Keep it between 200 and 250 words. Remove ANY mention of scientist.com in any capacity. Normalize for new lines and any formatting, but keep things like trademarks, acronyms, or anything that preserves the unique quality of the description.
+    Given the following structured data about a company, rewrite the description to be informative and natural while preserving its meaning and unique quality. Write in third person objective. Keep it between 50 and 150 words. Remove ANY mention of scientist.com in any capacity. Normalize for new lines and any formatting, but keep things like trademarks, acronyms, or anything that preserves the unique quality of the description.
 
     Company Name: {company.get('title', 'Unknown')}
-    Year Established: {company.get('yearEstablished', 'Unknown')}
-    Headquarters: {company.get('headquarters', 'Unknown')}
-    Company Type: {company.get('companyType', 'Unknown')}
 
     Sites:
     {', '.join([site['address'] for site in company.get('sites', []) if 'address' in site])}
