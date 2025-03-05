@@ -28,7 +28,7 @@ except (FileNotFoundError, json.JSONDecodeError):
 def generate_description(company):
     """Generate an improved description using OpenAI API, with a fallback to the original."""
     prompt = f"""
-    Given the following structured data about a company, rewrite the description to be more engaging, informative, and natural while preserving its meaning. Keep it under 250 words.
+    Given the following structured data about a company, rewrite the description to be informative and natural while preserving its meaning and unique quality. Write in third person objective. Keep it between 200 and 250 words. Remove ANY mention of scientist.com in any capacity. Normalize for new lines and any formatting, but keep things like trademarks, acronyms, or anything that preserves the unique quality of the description.
 
     Company Name: {company.get('title', 'Unknown')}
     Year Established: {company.get('yearEstablished', 'Unknown')}
@@ -123,7 +123,7 @@ with open(output_file, "w", encoding="utf-8") as f:
 
         print(f"Processing: {company['title']}")
         company["description"] = generate_description(company)
-        company["comendServices"] = generate_services(company, ["service1", "service2", "service3", "service4", "service5"])
+        # company["comendServices"] = generate_services(company, ["service1", "service2", "service3", "service4", "service5"])
 
         # Write each company as it's processed
         processed_companies.append(company)
