@@ -4,11 +4,11 @@ from openai import OpenAI
 from tqdm import tqdm  # Progress bar
 
 # Set up OpenAI API key
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="")
 
 # File paths
-input_file = "../data/input/fixedCombinedFinalData.json"
-output_file = "../data/output/fixedCombinedFinalDataNewDescriptions.json"
+input_file = "../data/input/fixedCombinedFinalData-filtered.json"
+output_file = "../data/output/fixedCombinedFinalData-filteredNewDescriptions.json"
 
 # Load input JSON data
 with open(input_file, "r", encoding="utf-8") as f:
